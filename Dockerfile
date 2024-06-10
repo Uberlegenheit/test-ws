@@ -12,4 +12,4 @@ WORKDIR /app
 
 COPY --from=build /app/cli /bin/cli
 
-RUN ln -s /bin/cli /app/cli
+CMD ["/app/cli"]
