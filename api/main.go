@@ -98,7 +98,7 @@ func (api *API) initialize() {
 
 	api.router.GET("/market-price", api.MarketPrice)
 
-	api.server = &http.Server{Addr: fmt.Sprintf(":%d", api.cfg.API.ListenOnPort), Handler: api.router}
+	api.server = &http.Server{Addr: fmt.Sprintf(":%d", 9000 /*api.cfg.API.ListenOnPort*/), Handler: api.router}
 }
 
 func (api *API) startServe() error {
